@@ -1,4 +1,5 @@
-/*
+
+                    /*
  * Dropit v1.1.0
  * http://dev7studios.com/dropit
  *
@@ -9,26 +10,23 @@
 
 ;(function($) {
 
-    $.fn.dropit = function(method) {
+    $.fn.dropitup = function(method) {
 
         var methods = {
 
             init : function(options) {
-                this.dropit.settings = $.extend({}, this.dropit.defaults, options);
+                this.dropitup.settings = $.extend({}, this.dropitup.defaults, options);
                 return this.each(function() {
                     var $el = $(this),
                          el = this,
-                         settings = $.fn.dropit.settings;
+                         settings = $.fn.dropitup.settings;
 
-                    // Hide initial submenus
-                    $el.addClass('dropit')
-                    .find('>'+ settings.triggerParentEl +':has('+ settings.submenuEl +')').addClass('dropit-trigger')
-                    .find(settings.submenuEl).addClass('dropit-submenu').hide();
-
-                     // Hide initial submenus
+                 // Hide initial submenus
                     $el.addClass('dropitup')
                     .find('>'+ settings.triggerParentEl +':has('+ settings.submenuEl +')').addClass('dropit-trigger')
                     .find(settings.submenuEl).addClass('dropit-submenu-up').hide();
+
+
 
                     // Open on click
                     $el.off(settings.action).on(settings.action, settings.triggerParentEl +':has('+ settings.submenuEl +') > '+ settings.triggerEl +'', function(){
@@ -42,7 +40,7 @@
 
                         // Hide open menus
                         settings.beforeHide.call(this);
-                        $('.dropit-open').removeClass('dropit-open').find('.dropit-submenu').hide();
+                        $('.dropit-open').removeClass('dropit-open').find('.dropit-submenu-up').hide();
                         settings.afterHide.call(this);
 
                         // Open this menu
@@ -56,7 +54,7 @@
                     // Close if outside click
                     $(document).on('click', function(){
                         settings.beforeHide.call(this);
-                        $('.dropit-open').removeClass('dropit-open').find('.dropit-submenu').hide();
+                        $('.dropit-open').removeClass('dropit-open').find('.dropit-submenu-up').hide();
                         settings.afterHide.call(this);
                     });
 
