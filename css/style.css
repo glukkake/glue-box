@@ -128,6 +128,7 @@ html, body{
  header .hero img {
    display: block;
    margin:3em auto 0;
+   width:85%;
  }
 
   /* BUTTONS */
@@ -193,6 +194,9 @@ html, body{
    min-height: 439px;
    position: relative;
    margin-top: 25px;
+   max-width: 450px;
+   margin-left: auto;
+   margin-right: auto;
  }
  .box.middle {
    min-height: 485px;
@@ -329,13 +333,16 @@ html, body{
    background-color: transparent;
  }
  footer .logo{
-   padding: 2.35em 0;
+   padding: 2em 0;
    margin: 0 auto;
    display: block;
  }
+  footer img {
+      width:150px;
+   }
 
   @media (min-width: 992px){
-   footer{
+   footer {
      background-color: #3498DB;
      background-image: linear-gradient(to left,
         #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%);
@@ -350,8 +357,9 @@ html, body{
      background-color: #3498DB;
    }
    footer .logo{
-     padding: 2em 0 2em 1.5em;
+   
    }
+
  }
 
 /* DASHBOARD */
@@ -559,4 +567,36 @@ html, body{
      margin:0 1% 25px;
    }
  }
-
+.item-box > img {
+   position:absolute;
+   height:100%;
+   width:auto;
+   top:0;
+   left:0;
+   right:0;
+ }
+ .item-box h2 {
+   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 17px;
+   margin:0;
+ }
+ .item-box h2 a {
+   color: #3498DB;
+   text-decoration: none;
+ }
+ .item-box h2 img {
+   width:16px;
+   height:16px;
+   position:relative;
+   top:2px;
+   margin-right:5px;
+ }
+ .item-box p {
+   font-size: 14px;
+   color: #333333;
+   line-height: 18px;
+   margin:5px 0 0;
+ }
+.settings-btn { margin-top:0px!important; }
