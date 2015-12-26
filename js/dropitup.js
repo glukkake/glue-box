@@ -1,6 +1,5 @@
-
-                    /*
- * Dropit v1.1.0
+/*
+ * Dropitup v1.1.0
  * http://dev7studios.com/dropit
  *
  * Copyright 2012, Dev7studios
@@ -21,11 +20,10 @@
                          el = this,
                          settings = $.fn.dropitup.settings;
 
-                 // Hide initial submenus
+                    // Hide initial submenus
                     $el.addClass('dropitup')
                     .find('>'+ settings.triggerParentEl +':has('+ settings.submenuEl +')').addClass('dropit-trigger')
                     .find(settings.submenuEl).addClass('dropit-submenu-up').hide();
-
 
 
                     // Open on click
@@ -95,6 +93,6 @@
         afterHide: function(){} // Triggers before submenu is hidden
     };
 
-    $.fn.dropit.settings = {};
+    $.fn.dropitup.settings = {};
 
 })(jQuery);

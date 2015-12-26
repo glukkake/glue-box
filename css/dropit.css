@@ -27,7 +27,7 @@
 	padding: 20px;
 	margin: 20px 0 0;
 }
-.dropit .dropit-submenu-up {
+.dropit #up .dropit-submenu {
     position: absolute;
     top: -151px;
     right: -8px; /* dropdown left or right */
@@ -57,7 +57,7 @@
   right: 10px;
  }
 
- .dropit .dropit-open .dropit-submenu-up:after {
+ .dropit #up .dropit-open .dropit-submenu:after {
   content: " ";
   position: absolute;
   border-style: solid;
